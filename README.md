@@ -3,8 +3,16 @@
 
 Run `./gradlew connectedCheck` to reproduce.
 
-The app throws the following exception when restoring a fragments state inside a ViewPager.
+The app throws an exception when restoring a fragments state inside a ViewPager.
 
+
+The manual repro steps are as follows:
+switch to 3rd tab
+open activity (with button)
+press back
+switch back to 1st tab
+
+This reproduces 100% of the time on SDK 19.
 ```
 Caused by: android.os.BadParcelableException: ClassNotFoundException when unmarshalling: android.support.v7.widget.RecyclerView$SavedState
 at android.os.Parcel.readParcelableCreator(Parcel.java:2147)

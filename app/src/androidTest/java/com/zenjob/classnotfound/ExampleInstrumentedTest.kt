@@ -16,8 +16,6 @@ class ExampleInstrumentedTest {
 
     @Test
     fun useAppContext() {
-        onView(allOf(withText("GO"), isDisplayed())).perform(click())
-        pressBack()
         onView(withText("C")).perform(click())
         onView(allOf(withText("GO"), isDisplayed())).perform(click())
         pressBack()
