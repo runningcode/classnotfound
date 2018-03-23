@@ -7,10 +7,10 @@ The app throws an exception when restoring a fragments state inside a ViewPager.
 
 
 The manual repro steps are as follows:
-switch to 3rd tab
-open activity (with button)
-press back
-switch back to 1st tab
+* switch to 3rd tab
+* open activity (with button)
+* press back
+* switch back to 1st tab
 
 This reproduces 100% of the time on SDK 19.
 ```
